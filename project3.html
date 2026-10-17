@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  width: 480px;
+  height: 240px;
+  background: white;
+  border-radius: 0 0 240px 240px;
+  position: relative;
+  transform: translateY(-80px);
+}
+
+.iris {
+  width: 240px;
+  height: 240px;
+  background: skyblue;
+  border-radius: 50%;
+  position: absolute;
+  left: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  width: 90px;
+  height: 90px;
+  background: black;
+  border-radius: 50%;
+}
+
+.tear {
+  width: 72px;
+  height: 97.5px;
+  background: skyblue;
+  border-radius: 50%;
+  position: absolute;
+  left: 204px;
+  top: 217.5px;
+  animation: fall 2.5s linear infinite;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(450px);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="eye">
+    <div class="iris">
+      <div class="pupil"></div>
+    </div>
+    <div class="tear"></div>
+  </div>
+</body>
+</html>
